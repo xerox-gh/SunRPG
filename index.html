@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SunRPG</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true">
+      <div class="sun">☀</div>
+      <div class="cloud cloud-one">doge?</div>
+      <div class="cloud cloud-two">404</div>
+    </div>
+
+    <main class="game-shell">
+      <section class="title-card" aria-labelledby="game-title">
+        <p class="kicker">open-world sandbox brainrot simulator</p>
+        <h1 id="game-title">SUNRPG</h1>
+        <p class="subtitle">Touch grass. Touch plasma. Regret both.</p>
+      </section>
+
+      <section class="scene-grid">
+        <article class="viewport" aria-label="Current scene">
+          <div class="player" title="You spawned here">🧍</div>
+          <div class="trampoline" title="Definitely safe">▰</div>
+          <div class="npc" title="Tutorial NPC">🧌</div>
+          <div class="wall" title="Invisible wall, but visible for legal reasons"></div>
+          <p class="sign">PRESS W TO REGRET</p>
+        </article>
+
+        <aside class="hud" aria-label="Player status">
+          <h2>Status</h2>
+          <dl>
+            <div><dt>Health</dt><dd><span id="health">100</span>/100</dd></div>
+            <div><dt>Stamina</dt><dd><span id="stamina">100</span>/100</dd></div>
+            <div><dt>Brainrot</dt><dd><span id="brainrot">0</span>/100</dd></div>
+            <div><dt>Location</dt><dd id="location">The Flatlands of Beginnings</dd></div>
+          </dl>
+
+          <h2>Inventory</h2>
+          <ul id="inventory">
+            <li>Rusty wrench</li>
+            <li>Single hot pocket</li>
+            <li>Trampoline</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="console" aria-label="Game log and actions">
+        <div id="log" class="log" aria-live="polite"></div>
+        <form id="command-form" class="command-form">
+          <label for="command">What do you do first?</label>
+          <div class="input-row">
+            <input id="command" name="command" autocomplete="off" placeholder="try: look around, use trampoline, eat hot pocket, flyhack" />
+            <button type="submit">Do it</button>
+          </div>
+        </form>
+        <div class="quick-actions" aria-label="Quick actions">
+          <button type="button" data-command="look around">Look around</button>
+          <button type="button" data-command="use trampoline">Use trampoline</button>
+          <button type="button" data-command="eat hot pocket">Eat hot pocket</button>
+          <button type="button" data-command="flyhack">Attempt flyhack</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
